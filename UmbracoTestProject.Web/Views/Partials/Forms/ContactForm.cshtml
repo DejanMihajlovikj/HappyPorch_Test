@@ -2,16 +2,20 @@
 
 @using (Html.BeginUmbracoForm<ContactFormController>("Submit"))
 {
+    @Html.AntiForgeryToken()
+
     @Html.LabelFor(m => m.Email)
     <br />
     @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
     <br />
+    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
     <br />
 
     @Html.LabelFor(m => m.Message)
     <br />
     @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
     <br />
+    @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
     <br />
 
     <button class="button button--border--solid" type="submit">Send</button>
