@@ -91,6 +91,15 @@ namespace UmbracoTestProject.Core.Models
 		}
 
 		///<summary>
+		/// PhoneNumber: Phone Number
+		///</summary>
+		[ImplementPropertyType("phoneNumber")]
+		public string PhoneNumber
+		{
+			get { return this.GetPropertyValue<string>("phoneNumber"); }
+		}
+
+		///<summary>
 		/// Photo
 		///</summary>
 		[ImplementPropertyType("photo")]

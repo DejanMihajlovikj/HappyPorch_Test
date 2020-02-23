@@ -27,6 +27,10 @@
                         {
                             <a href="mailto:@person.Email" class="employee-grid__item__email">@person.Email</a>
                         }
+                        @if (!string.IsNullOrEmpty(person.PhoneNumber))
+                        { 
+                            @person.PhoneNumber
+                        }
                         <div class="employee-grid__item__contact">
                             @SocialLink(person.FacebookUsername, "Facebook")
                             @SocialLink(person.TwitterUsername, "Twitter")
